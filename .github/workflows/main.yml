@@ -6,12 +6,15 @@ on:
     tags:
       - v*
 
+env:
+  OCTOPI_INCLUDE_HAPROXY: yes
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Install Dependencies
-      run: sudo apt install coreutils p7zip-full qemu-user-static haproxy
+      run: sudo apt install coreutils p7zip-full qemu-user-static
     - name: Checkout CustomPiOS
       uses: actions/checkout@v2
       with:
