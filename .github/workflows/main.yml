@@ -28,7 +28,7 @@ jobs:
       run: cd repository/src && ../../CustomPiOS/src/update-custompios-paths
 
     - name: Add Build Environment
-      run: echo 'OCTOPI_INCLUDE_HAPROXY=yes' | sudo tee /common.sh
+      run: echo 'export OCTOPI_INCLUDE_HAPROXY=yes' | sudo tee /common.sh
 
     - name: Build Image
       run: sudo modprobe loop && cd repository/src && sudo bash -x ./build_dist
