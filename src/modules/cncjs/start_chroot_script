@@ -10,10 +10,6 @@ set -e
 export LC_ALL=C
 
 source /common.sh
-echo "Current common.sh:"
-cat /common.sh
-echo "Current environment:"
-env
 
 ### Script ####
 
