@@ -24,7 +24,7 @@ jobs:
       run: cd v1pi/src/image && wget -q -c --trust-server-names 'https://downloads.raspberrypi.org/raspbian_lite_latest'
     - name: Update CustomPiOS Paths
       run: cd v1pi/src && ../../CustomPiOS/src/update-custompios-paths
-    - name: Build Image
+    - name: Build v1pi Image
       run: sudo modprobe loop && cd v1pi/src && sudo bash -x ./build_dist
     - name: Move Output
       run: mv /home/runner/work/v1pi/v1pi/v1pi/src/workspace/*-raspbian-buster-lite.img v1pi.img
