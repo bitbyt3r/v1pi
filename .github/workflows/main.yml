@@ -6,9 +6,6 @@ on:
     tags:
       - v*
 
-env:
-  OCTOPI_INCLUDE_HAPROXY: yes
-
 jobs:
   build:
     runs-on: ubuntu-latest
