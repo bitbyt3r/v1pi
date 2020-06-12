@@ -16,10 +16,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: 'guysoft/CustomPiOS'
+        path: CustomPiOS
     - name: Checkout Project Repository
       uses: actions/checkout@v2
       with:
         repository: 'bitbyt3r/v1pi'
+        path: v1pi
     - name: Download Raspbian Image
       run: cd v1pi/src/image && wget -q -c --trust-server-names 'https://downloads.raspberrypi.org/raspbian_lite_latest'
     - name: Update CustomPiOS Paths
